@@ -5,23 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gordo Computadora TV</title>
     <style>
-        body { background-color: #0e0e10; color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 10px; display: flex; flex-direction: column; align-items: center; }
-        h1 { color: #9146ff; font-size: 1.5rem; margin-bottom: 15px; }
-        .grid-principal { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 1000px; }
-        
-        /* Contenedor Jitsi */
+        body { background-color: #0e0e10; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        h1 { margin-bottom: 20px; color: #9146ff; }
+        .grid-principal { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 1200px; }
         .fuente-privada { width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; border: 2px solid #333; overflow: hidden; background: #000; }
-        
-        /* Sección Twitch y Chat */
-        .seccion-twitch { display: grid; grid-template-columns: 1fr 350px; gap: 10px; width: 100%; }
+        .seccion-twitch { display: grid; grid-template-columns: 1fr 350px; gap: 15px; width: 100%; }
         .portada-twitch { width: 100%; aspect-ratio: 16 / 9; border-radius: 8px; background: #000; }
-        .chat-twitch { height: 450px; border-radius: 8px; border: none; background: #18181b; }
-
-        /* Ajuste para Celulares */
-        @media (max-width: 850px) {
-            .seccion-twitch { grid-template-columns: 1fr; }
-            .chat-twitch { height: 400px; }
-        }
+        .chat-twitch { height: 500px; border-radius: 8px; border: none; }
+        @media (max-width: 850px) { .seccion-twitch { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -29,10 +20,10 @@
     <h1>Gordo Computadora TV</h1>
 
     <div class="grid-principal">
-        <!-- 1. JITSI CON PARÁMETROS PARA MÓVIL -->
+        <!-- 1. CONTENIDO PROHIBIDO (TALKY.IO) -->
         <div class="fuente-privada">
             <iframe 
-                src="https://meet.jit.si/GordoPelota#config.startWithAudioMuted=true&config.prejoinPageEnabled=false&interfaceConfig.MOBILE_APP_PROMO=false" 
+                src="https://talky.io/GordoPelotaTv" 
                 allow="camera; microphone; display-capture; fullscreen" 
                 width="100%" 
                 height="100%" 
@@ -41,10 +32,7 @@
         </div>
 
         <div class="seccion-twitch">
-            <!-- 2. REPRODUCTOR TWITCH -->
             <div id="twitch-video" class="portada-twitch"></div>
-
-            <!-- 3. CHAT TWITCH -->
             <iframe class="chat-twitch" 
                     src="https://www.twitch.tv/embed/gordocomputadora/chat?parent=gordopelota.github.io" 
                     width="100%">
